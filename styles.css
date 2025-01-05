@@ -1,0 +1,231 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+
+  /* Primary */
+
+  --White: white;
+
+  --Blue: hsl(246, 80%, 60%);
+  /* (work) */
+  --Light-orange: hsl(15, 100%, 70%);
+  /* (play) */
+  --Soft-blue: hsl(195, 74%, 62%);
+  /* (study) */
+  --Light-red: hsl(348, 100%, 68%);
+  /* (exercise) */
+  --Lime-green: hsl(145, 58%, 55%);
+  /* (social) */
+  --Violet: hsl(264, 64%, 52%);
+  /* (self care) */
+  --Soft-orange: hsl(43, 84%, 65%);
+
+  /* Neutral */
+
+  --Very-dark-blue: hsl(226, 43%, 10%);
+  --Dark-blue: hsl(235, 46%, 20%);
+  --Desaturated-blue: hsl(235, 45%, 61%);
+  --Pale-Blue: hsl(236, 100%, 87%);
+}
+
+body {
+  background-color: var(--Very-dark-blue);
+  color: var(--Pale-Blue);
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+}
+
+.main-container {
+  /* border: 2px solid white; */
+  width: 328px;
+  margin: 158px auto;
+}
+
+.first-section {
+  position: relative;
+}
+
+.main-card__user {
+  background-color: var(--Blue);
+  display: flex;
+  border-radius: 16px;
+  padding: 30px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+.main-card__img {
+  width: 65px;
+  margin-right: 10px;
+  border: 3px solid var(--White);
+  border-radius: 50%;
+}
+
+.main-card__title {
+  font-size: 0.9em;
+  margin: 10px 4px 0;
+}
+.main-card__name {
+  font-size: 1.4em;
+  font-weight: 300;
+  color: var(--White);
+}
+
+.main-card__dates {
+  background-color: var(--Dark-blue);
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-around;
+  height: 100px;
+  padding-top: 45px;
+  font-size: 1.2em;
+  position: absolute;
+  width: 100%;
+  top: 105px;
+}
+
+.second-section {
+  padding-top: 220px;
+}
+.main-card__frequency:hover {
+  cursor: pointer;
+  color: var(--White);
+}
+
+.card {
+  border-radius: 1px solid var(--White);
+  position: relative;
+  margin-bottom: 105px;
+}
+.card__background {
+  background-color: var(--Light-orange);
+  height: 80px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  overflow: hidden;
+}
+.card__image {
+  margin-top: -10px;
+  padding-left: 235px;
+}
+.card__details {
+  background-color: var(--Dark-blue);
+  display: flex;
+  flex-direction: column;
+  height: 122px;
+  justify-content: space-between;
+  padding: 25px;
+  border-radius: 16px;
+  position: absolute;
+  width: 100%;
+  bottom: -85px;
+  &:hover {
+    cursor: pointer;
+    background-color: var(--Desaturated-blue);
+  }
+}
+
+.card__activity,
+.card__time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__title {
+  color: var(--White);
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.card__hour {
+  color: var(--White);
+  font-size: 2em;
+}
+
+@media only screen and (min-width: 1200px) {
+  .main-container {
+    width: 1150px;
+    display: flex;
+    margin: 160px auto;
+  }
+
+  .first-section {
+    padding-top: 24px;
+    width: 280px;
+    height: 564px;
+  }
+  .second-section {
+    height: 564px;
+    width: 860px;
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 24px;
+  }
+
+  .main-card__user {
+    height: 355px;
+    flex-direction: column;
+  }
+
+  .main-card__img {
+    width: 85px;
+    margin-bottom: 45px;
+  }
+
+  .main-card__title {
+    font-size: 1em;
+  }
+
+  .main-card__name {
+    font-size: 2.4em;
+  }
+
+  .main-card__dates {
+    margin-top: 255px;
+    height: 200px;
+    flex-direction: column;
+    padding: 40px 32px 18px;
+  }
+
+  .card {
+    width: 240px;
+    height: 244px;
+    margin-bottom: 25px;
+  }
+
+  .card__image {
+    padding-left: 150px;
+  }
+
+  .card__details {
+    height: 200px;
+    bottom: -10px;
+  }
+  .card__time{
+    height: 300px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0;
+
+  }
+}
+
+/* --------------------(Footer)------------------------*/
+.attribution {
+  font-size: 0.76em;
+  text-align: center;
+}
+.attribution a {
+  color: var(--Desaturated-blue);
+  text-decoration: none;
+}
